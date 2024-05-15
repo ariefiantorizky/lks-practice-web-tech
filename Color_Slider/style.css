@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-color {
+    width: 275px;
+    height: max-content;
+    background-color: white;
+    box-shadow: 5px 8px 30px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.color-preview {
+    width: 100%;
+    height: 250px;
+    background-color: rgba(128, 128, 128, 0.05);
+}
+
+.color-preview .color {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-preview .color h4 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container-sliders {
+    padding: 20px;
+    background-color: white;
+}
+
+.container-sliders .slider {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.container-sliders .slider .slider-label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.container-sliders .slider .slider-label label {
+    font-size: 17px;
+}
+
+.container-sliders .slider .slider-label p {
+    font-size: 15px;
+    color: rgb(48, 48, 48);
+}
+
+.container-sliders .slider .slider-input {
+    width: 100%;
+    appearance: none;
+    height: 17px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.container-sliders .slider .slider-input::-webkit-slider-thumb {
+    appearance: none;
+    height: 17px;
+    width: 17px;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 2px solid white;
+}
+
+.container-sliders .slider #red::-webkit-slider-thumb {
+    background-color: red;
+    box-shadow: -407px 0 0 400px red;
+}
+
+.container-sliders .slider #green::-webkit-slider-thumb {
+    background-color: green;
+    box-shadow: -407px 0 0 400px green;
+}
+
+.container-sliders .slider #blue::-webkit-slider-thumb {
+    background-color: blue;
+    box-shadow: -407px 0 0 400px blue;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Color Slider</title>
+
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="container-color">
+                <div class="color-preview">
+                    <div class="color">
+                        <h4>rgb(0, 0, 0)</h4>
+                    </div>
+                </div>
+                <div class="container-sliders">
+                    <div class="slider">
+                        <div class="slider-label">
+                            <label for="red">Red</label>
+                            <p>0</p>
+                        </div>
+                        <input
+                            type="range"
+                            name="slider"
+                            id="red"
+                            class="slider-input"
+                            value="0"
+                            min="0"
+                            max="255" />
+                    </div>
+                    <div class="slider">
+                        <div class="slider-label">
+                            <label for="green">Green</label>
+                            <p>0</p>
+                        </div>
+                        <input
+                            type="range"
+                            name="slider-input"
+                            id="green"
+                            class="slider-input"
+                            value="0"
+                            min="0"
+                            max="255" />
+                    </div>
+                    <div class="slider">
+                        <div class="slider-label">
+                            <label for="blue"> Blue </label>
+                            <p>0</p>
+                        </div>
+                        <input
+                            type="range"
+                            name="slider"
+                            id="blue"
+                            class="slider-input"
+                            value="0"
+                            min="0"
+                            max="255" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // DEFAULT VALUE
+            let red = 64;
+            let blue = 64;
+            let green = 64;
+
+            // SELECTOR
+            const sliderColor = document.getElementsByClassName("slider-input");
+            const sliderLabel = document.querySelectorAll(".slider-label p");
+            const colorPreview = document.querySelector(
+                ".color-preview .color",
+            );
+            const colorText = colorPreview.querySelector("h4");
+
+            // INITIAL VALUE
+            document.addEventListener("DOMContentLoaded", (event) => {
+                colorText.innerHTML = `rgb(${red}, ${green}, ${blue})`;
+                colorPreview.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+            });
+
+            // LOOPING SLIDER
+            for (let i = 0; i < sliderColor.length; i++) {
+                const slider = sliderColor[i];
+
+                // EVENT LISTENER
+                slider.addEventListener("input", (event) => {
+                    let tempValue = event.target.value;
+                    let sliderValue =
+                        (parseInt(tempValue) / parseInt(slider.max)) * 255;
+
+                    sliderLabel[i].innerHTML = parseInt(sliderValue);
+
+                    red = sliderColor[0].value;
+                    green = sliderColor[1].value;
+                    blue = sliderColor[2].value;
+
+                    colorText.innerHTML = `rgb(${red}, ${green}, ${blue})`;
+                    colorPreview.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+                });
+            }
+        </script>
+    </body>
+</html>
