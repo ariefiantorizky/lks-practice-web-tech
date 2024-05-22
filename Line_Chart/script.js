@@ -59,8 +59,16 @@ window.onload = () => {
         },
         {
             x: 11,
-            y: 150
-        }
+            y: 150,
+        },
+        {
+            x: 12,
+            y: 275,
+        },
+        {
+            x: 13,
+            y: 260,
+        },
     ];
 
     // SETUP CHART SETTINGS
@@ -69,7 +77,7 @@ window.onload = () => {
     const spaces = 35;
     const xAxisLabel = "Tanggal";
     const yAxisLabel = "Total";
-    const distance = (chartWidth / spaces) * 3;
+    const distance = (chartWidth / spaces) * 2;
 
     //* DRAW CHART
     context.clearRect(0, 0, chartWidth, chartHeight);
@@ -90,6 +98,7 @@ window.onload = () => {
     context.font = "13px Arial";
     context.textAlign = "center";
     context.textBaseLine = "middle";
+
     context.fillText(
         xAxisLabel,
         chartWidth - spaces,
@@ -110,14 +119,14 @@ window.onload = () => {
     context.stroke();
 
     //* DRAW LINE POINTS CIRCLE
-    context.fillStyle = "black";
+    context.fillStyle = "red";
     context.strokeWidth = "2px";
 
     x = spaces;
     for (let i = 0; i < data.length; i++) {
         context.beginPath();
 
-        context.arc(x, chartHeight - data[i].y - spaces, 3, 0, 2 * Math.PI);
+        context.arc(x, chartHeight - data[i].y - spaces, 5, 0, 2 * Math.PI);
 
         context.fill();
         x += distance;
@@ -134,7 +143,7 @@ window.onload = () => {
     x = spaces;
     for (let i = 0; i < data.length; i++) {
         // create vertical labels
-        context.fillText(data[i].y, spaces / 2, chartHeight - data[i].y);
+        context.fillText(data[i].y, spaces / 3, chartHeight - data[i].y - spaces);
         x += distance;
     }
 };

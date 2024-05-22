@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Compare Images</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body class="bg-white flex items-center justify-center h-screen">
+        <div
+            id="container"
+            class="relative w-[600px] h-[400px] overflow-hidden rounded-lg">
+            <div class="w-full h-full bg-[url(./assets/wallpaper.jpg)] bg-top bg-no-repeat bg-cover"></div>
+         
+            <div
+                id="overlay"
+                class="absolute top-0 left-0 h-full w-1/2 overflow-hidden backdrop-grayscale">
+            </div>
+
+            <div id="slider"></div>
+            <div id="handle"></div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
