@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+#hiddenText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    color: black;
+    font-size: 16px;
+    text-align: left;
+    user-select: none;
+    pointer-events: none;
+    overflow: hidden;
+    padding: 12px;
+}
+
+#hiddenText p{
+    margin-bottom: 15px;
+}
+
+#viewBox{
+    width: 400px;
+    height: 400px;
+    border: 2px solid rgba(0,0,0,0.3);
+    position: absolute;
+    cursor: move;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 12px;
+}

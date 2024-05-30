@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Responsive Design</title>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="w-full h-screen p-5">
+        <!-- GRID RESPONSIVE -->
+        <div
+            class="w-full h-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            <div class="w-full h-20 bg-red-500 rounded-md"></div>
+            <div
+                class="w-full h-20 bg-red-500 md:bg-blue-600 lg:bg-teal-600 rounded-md"></div>
+            <div class="w-full h-20 bg-red-500 rounded-md"></div>
+            <div class="w-full h-20 bg-red-500 rounded-md"></div>
+            <div class="w-full h-20 bg-red-500 rounded-md"></div>
+        </div>
+
+        <!-- FLEX RESPONSIVE -->
+        <div class="w-full h-auto my-5 flex flex-nowrap gap-5">
+            <div class="w-[175px] h-20 bg-red-500 rounded-md"></div>
+            <div class="w-[175px] h-20 bg-red-500 rounded-md"></div>
+            <div class="w-[175px] h-20 bg-red-500 rounded-md"></div>
+            <div class="w-[175px] h-20 bg-red-500 rounded-md"></div>
+            <div class="w-[175px] h-20 bg-red-500 rounded-md"></div>
+        </div>
+
+        <div class="w-full h-auto my-5 flex flex-col lg:flex-row gap-5">
+            <div class="w-full h-20 bg-red-500 rounded-md"></div>
+            <div class="w-full h-20 bg-red-500 rounded-md"></div>
+            <div class="w-full h-20 bg-red-500 rounded-md"></div>
+            <div class="w-full h-20 bg-red-500 rounded-md"></div>
+            <div class="w-full h-20 bg-red-500 rounded-md"></div>
+        </div>
+
+        <!-- STUDY CASES / GRID & FLEX CARD -->
+        <div class="w-full h-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 my-5">
+            <div class="w-full flex flex-row sm:flex-col items-center sm:items-start gap-3">
+                <div class="aspect-video w-full bg-red-500 rounded-lg"></div>
+                <div>
+                    <h4 class="text-lg font-semibold leading-snug">Artikel</h4>
+                    <p class="text-gray-700 leading-snug line-clamp-2 mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, dolorum!</p>
+                </div>
+            </div>
+            <div class="w-full flex flex-row sm:flex-col items-center sm:items-start gap-3">
+                <div class="aspect-video w-full bg-red-500 rounded-lg"></div>
+                <div>
+                    <h4 class="text-lg font-semibold leading-snug">Artikel</h4>
+                    <p class="text-gray-700 leading-snug line-clamp-2 mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, dolorum!</p>
+                </div>
+            </div>
+            <div class="w-full flex flex-row sm:flex-col items-center sm:items-start gap-3">
+                <div class="aspect-video w-full bg-red-500 rounded-lg"></div>
+                <div>
+                    <h4 class="text-lg font-semibold leading-snug">Artikel</h4>
+                    <p class="text-gray-700 leading-snug line-clamp-2 mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, dolorum!</p>
+                </div>
+            </div>
+            <div class="w-full flex flex-row sm:flex-col items-center sm:items-start gap-3">
+                <div class="aspect-video w-full bg-red-500 rounded-lg"></div>
+                <div>
+                    <h4 class="text-lg font-semibold leading-snug">Artikel</h4>
+                    <p class="text-gray-700 leading-snug line-clamp-2 mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, dolorum!</p>
+                </div>
+            </div>
+            <div class="w-full flex flex-row sm:flex-col items-center sm:items-start gap-3">
+                <div class="aspect-video w-full bg-red-500 rounded-lg"></div>
+                <div>
+                    <h4 class="text-lg font-semibold leading-snug">Artikel</h4>
+                    <p class="text-gray-700 leading-snug line-clamp-2 mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, dolorum!</p>
+                </div>
+            </div>
+            <div class="w-full flex flex-row sm:flex-col items-center sm:items-start gap-3">
+                <div class="aspect-video w-full bg-red-500 rounded-lg"></div>
+                <div>
+                    <h4 class="text-lg font-semibold leading-snug">Artikel</h4>
+                    <p class="text-gray-700 leading-snug line-clamp-2 mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, dolorum!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDY CASES / SECTION LAYOUT -->
+        <div class="w-full h-auto bg-gray-100 px-14 py-24 flex flex-col-reverse md:flex-row items-center justify-start gap-8 my-5">
+            <div class="w-full h-auto">
+                <h1 class="text-3xl md:text-5xl font-semibold leading-snug md:leading-tight mb-2">Lomba Keterampilan Siswa Tahun 2024 Tingkat DKJ Jakarta</h1>
+                <p class="text-lg text-gray-700 leading-normal">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum quibusdam facere accusantium?</p>
+            </div>
+            <div class="w-full h-auto">
+                <div class="aspect-video w-full bg-teal-600 rounded-lg overflow-hidden">
+                    <img src="https://www.smk2pekalongan.sch.id/asset/foto_berita/WhatsApp_Image_2024-02-26_at_11_42_53_11zon_11zon.jpg" alt="LKS" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

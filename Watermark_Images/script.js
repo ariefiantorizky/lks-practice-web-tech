@@ -23,7 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
             ctx.textAlign = "center";
             ctx.font = "35px Arial";
             ctx.fillStyle = "rgb(156, 163, 175)";
-            ctx.fillText(watermark.innerText, canvas.width / 2, canvas.height / 2);
+            // ctx.fillText(watermark.innerText, canvas.width / 2, canvas.height / 2, canvas.width);
+            // rotate fillText to 45deg
+            ctx.translate(canvas.width / 2, canvas.height / 2);
+            ctx.rotate(-45 * Math.PI / 180);
+            ctx.fillText(watermark.innerText, 0, 0);
 
             const link = document.createElement("a");
             link.download = "image_watermark.png";
